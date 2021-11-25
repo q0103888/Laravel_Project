@@ -83,10 +83,38 @@ https://templatemo.com/tm-558-klassy-cafe
                             </li>
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
+
+                            <li>
+                                @if (Route::has('login'))
+                                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                                    @auth
+                                        <li>
+                                            <!-- x-app-layout을 가져온 이유는 JetStream은 로그인 후 로그아웃이나 프로필을 볼수있는데 그것을 home에서도 가능하도록 여기로 가져옴 -->
+                                            <x-app-layout>
+                                                
+                                            </x-app-layout>
+                                        
+                                        </li>    
+                                    @else
+                                        <li><a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                                        </li>
+                                        <!-- 기존에 welcome.blade에 있던 로그인을 할 수 있게 해주는 것을 Home에서도 가능하도록 여기로 가져옴-->
+                                        @if (Route::has('register'))
+                                        <li>    
+                                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                                        </li>
+                                        @endif
+                                    @endauth
+                                </div>
+                            @endif
+                            {{-- 기존 welcome에 있는 Login, Register을 여기로 가져옴 홈에서 로그인이 가능하게 끔 --}}
+                            </li>   
+
                         </ul>        
-                        <a class='menu-trigger'>
+                        {{-- 이거 뭔지 모르겠음 --}}
+                        {{-- <a class='menu-trigger'>
                             <span>Menu</span>
-                        </a>
+                        </a> --}}
                         <!-- ***** Menu End ***** -->
                     </nav>
                 </div>

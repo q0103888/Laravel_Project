@@ -14,10 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// }); 기존은 이게 있어서 바로 welcome페이지로 이동하지만 home을 띄어야하기 때문에 삭제
 
 
-Route::get('/home',[HomeController::class,"index"]);
+Route::get('/',[HomeController::class,"index"]);
 // home.blade.php를 불러오기 위한 Route
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
