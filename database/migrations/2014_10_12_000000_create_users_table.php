@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('usertype')->default(0);
+            //usertype는 일반유저와 관리자를 지정하기위해 있는것
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

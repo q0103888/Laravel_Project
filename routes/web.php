@@ -22,6 +22,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class,"index"]);
 // home.blade.php를 불러오기 위한 Route
 
+Route::get('/redirects',[HomeController::class,"redirects"]);
+//처음 화면 시작시 유저 구별을위한 Route
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
