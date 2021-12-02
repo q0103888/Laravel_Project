@@ -1220,6 +1220,9 @@ select {
 .inline-flex {
 	display: inline-flex;
 }
+.table {
+	display: table;
+}
 .grid {
 	display: grid;
 }
@@ -1360,6 +1363,11 @@ select {
 }
 .list-disc {
 	list-style-type: disc;
+}
+.appearance-none {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+	        appearance: none;
 }
 .grid-cols-6 {
 	grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -1620,6 +1628,10 @@ select {
 .py-10 {
 	padding-top: 2.5rem;
 	padding-bottom: 2.5rem;
+}
+.px-5 {
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
 }
 .pt-6 {
 	padding-top: 1.5rem;
