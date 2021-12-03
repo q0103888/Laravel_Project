@@ -16,6 +16,10 @@
             <div class="owl-menu-item owl-carousel">
 
                 @foreach ($data as $data)
+
+                <form action="{{ url('/addcart', $data->id)}}" method="post">
+                    <!-- 카트에 주문을 추가 하기 위한 메소드 -->
+                    @csrf
                 <!-- 각각의 메뉴 표시 창 마다 해당하는 정보를 $data에서 가져옴 -->
                 <div class="item">
                     <div style="background-image: url('/foodimage/{{ $data->image }}');" class='card'>
@@ -28,7 +32,12 @@
                           </div>
                         </div>
                     </div>
+
+                    <input type="number" name="quantity" min="1" value="1" style="width:80px">
+                    <input type="submit" value="add cart">
+
                 </div>
+                </form>
 
                 @endforeach
                 

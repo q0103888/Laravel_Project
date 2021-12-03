@@ -45,6 +45,14 @@ Route::get('/updateview/{id}',[AdminController::class,"updateview"]);
 Route::post('/update/{id}',[AdminController::class,"update"]);
 // 수정한 메뉴를 업데이트 하는 것
 
+Route::post('/addcart/{id}',[HomeController::class,"addcart"]);
+// 메뉴 주문을 위한 카트에 주문내역 추가
+
+Route::get('/showcart/{id}',[HomeController::class,"showcart"]);
+// 자신이 담은 장바구니를 보여줌
+
+Route::get('/remove/{id}',[HomeController::class,"remove"]);
+
 Route::get('/redirects',[HomeController::class,"redirects"]);
 //처음 화면 시작시 유저 구별을위한 Route
 

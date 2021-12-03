@@ -15,15 +15,13 @@
   <body>
     
     <div class="container-scroller">
-
       
     @include("admin.navbar");
     <!-- include는 어떠한 부분에 부분적 보기를 하기위해 사용하는 것-->
 
     <div style="position: relative; top: 60px; right:-150px">
         <!-- 여기서 메뉴를 등록-->
-            <form action="{{ url('/updateview', $data->id) }}" method="post" enctype="multipart/form-data">
-                
+            <form action="{{ url('/update', $data->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div >
                     <label>Title</label>
