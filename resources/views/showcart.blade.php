@@ -157,11 +157,13 @@ https://templatemo.com/tm-558-klassy-cafe
             <th style="padding: 30px">Action</th>
         </tr>
 
+        <form action="{{url('orderconfirm')}}" method="post">
+            @csrf
         @foreach ($data as $data)
-        <tr>
-            <td>{{ $data->title }}</td>
-            <td>{{ $data->price }}</td>
-            <td>{{ $data->quantity }}</td>
+        <tr align="center">
+            <td><input type="text" name="foodname[]" value="{{ $data->title }}" hidden="">{{ $data->title }}</td>
+            <td><input type="text" name="price[]" value="{{ $data->price }}" hidden="">{{ $data->price }}</td>
+            <td><input type="text" name="quantity[]" value="{{ $data->quantity }}" hidden="">{{ $data->quantity }}</td>
             
         </tr> 
         @endforeach
@@ -175,11 +177,11 @@ https://templatemo.com/tm-558-klassy-cafe
     </table>
 
     <div align="center" style="padding: 10px">
-        <button class="btn btn-primary" id="order">Order Now</button>
+        <button class="btn btn-primary" type="button" id="order">Order Now</button>
     </div>
 
 
-    <div align="center" style="padding: 10px">
+    <div id="appear" align="center" style="padding: 10px; display: none">
         <div style="padding: 10px">
             <label>Name</label>
             <input type="text" name="name" placeholder="Name">
@@ -197,10 +199,30 @@ https://templatemo.com/tm-558-klassy-cafe
 
         <div style="padding: 10px">
             <input class="btn btn-success" type="submit" value="Order Confirm">
+
+            <button id="close" type="button" class="btn btn-danger">Close</button>
         </div>
     </div>
+</form>
 
     </div>
+
+        <script type="text/javascript">
+            $("#order").click(
+                function()
+                {
+                    $("#appear").show();
+                }
+            );
+
+            $("#close").click(
+                function()
+                {
+                    $("#appear").hide();
+                }
+            );
+
+        </script>
 
     <script src="assets/js/jquery-2.1.0.min.js"></script>
 

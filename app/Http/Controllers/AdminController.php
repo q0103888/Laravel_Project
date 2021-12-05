@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Food;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Order;
 
 class AdminController extends Controller
 {
@@ -77,6 +78,23 @@ class AdminController extends Controller
             return redirect()->back();
     }
 
+    public function orders() {
+
+        $data=order::all();
+
+        return view('admin.orders', compact('data'));
+        // user가 주문한 정보를 admin이 확인하는 곳으로 이동하는 것
+    }
+
+    public function search(Request $request) {
+        
+        $search = $request->search;
+        
+        $data=order::where('name','like', '%'.$search.'%')->orWhere('foodname','like', '%'.$search.'%')->get();
+        // 주문자 정보를 이름으로 검색해 찾아야 하므로 이름을 찾아옴
+
+        return view('admin.orders', compact('data'));
+    }
 
 
 }

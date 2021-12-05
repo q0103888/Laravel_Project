@@ -52,9 +52,18 @@ Route::get('/showcart/{id}',[HomeController::class,"showcart"]);
 // 자신이 담은 장바구니를 보여줌
 
 Route::get('/remove/{id}',[HomeController::class,"remove"]);
+// 자신이 담은 장바구니 목록중 원하는것은 삭제 가능
+
+Route::post('/orderconfirm',[HomeController::class,"orderconfirm"]);
+// 장바구니에서 주문을 할시 요청사항 등
 
 Route::get('/redirects',[HomeController::class,"redirects"]);
 //처음 화면 시작시 유저 구별을위한 Route
+
+Route::get('/orders',[AdminController::class,"orders"]);
+// admin이 주문된 목록을 확인할 수 있음
+
+Route::get('/search',[AdminController::class,"search"]);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
