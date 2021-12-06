@@ -50,7 +50,7 @@
                 <td>{{ $data->foodname }}</td>
                 <td>{{ $data->price }}</td>
                 <td>{{ $data->quantity }}</td>
-                <td>{{ $data->price * $data->quantity}}원</td>
+                <td>{{ $data->price * $data->quantity}}</td>
             </tr>
             @endforeach
         </table>

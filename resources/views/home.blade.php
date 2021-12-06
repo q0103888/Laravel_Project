@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Klassy Cafe - Restaurant HTML Template</title>
+    <title>Mcdonalds</title>
 <!--
     
 TemplateMo 558 Klassy Cafe
@@ -34,13 +34,13 @@ https://templatemo.com/tm-558-klassy-cafe
     <body>
     
     <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
+    {{-- <div id="preloader">
         <div class="jumper">
             <div></div>
             <div></div>
             <div></div>
         </div>
-    </div>  
+    </div>   --}}
     <!-- ***** Preloader End ***** -->
     
     
@@ -52,23 +52,20 @@ https://templatemo.com/tm-558-klassy-cafe
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="{{ url('/') }}" class="logo">
-                            {{-- <img src="assets/images/klassy-logo.png" align="klassy cafe html template"> --}}
-                            <img src="assets/mcimages/mcdonalds.png" align="klassy cafe html template">  
+                            <img src="assets/mcimages/mcdonalds.png" style="padding-left:70px; padding-top: 15px ">
                             <a class="menu-trigger">
                                 <span>Menu</span>
                             </a>
                         </a>
-                          
+                        
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#about">About</a></li>
                             <li class="scroll-to-section"><a href="#menu">Menu</a></li>
-                            <li class="scroll-to-section">
                             @auth
-                                <a href="{{ url('/showcart', Auth::user()->id) }}">
-                                Cart
+                            <li class="scroll-to-section"><a href="{{ url('/showcart', Auth::user()->id) }}">Cart</a></li>
                                 
                             @endauth    
 
@@ -122,7 +119,7 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-lg-4">
                     <div class="left-content">
                         <div class="inner-content">
-                            <h4>Mcdonald</h4>
+                            <h4 style="color:red;">Mcdonald</h4>
                             <h6>THE BEST HAMBUGER</h6>
                             {{-- <div class="main-white-button scroll-to-section">
                                 <a href="#reservation">Make A Reservation</a>
@@ -136,21 +133,21 @@ https://templatemo.com/tm-558-klassy-cafe
                           <!-- Item -->
                           <div class="item">
                             <div class="img-fill">
-                                <img src="assets/images/slide-01.jpg" alt="">
+                                <img src="assets/mcimages/main1.jpg" alt="" style="height: 800px">
                             </div>
                           </div>
                           <!-- // Item -->
                           <!-- Item -->
                           <div class="item">
                             <div class="img-fill">
-                                <img src="assets/images/slide-02.jpg" alt="">
+                                <img src="assets/mcimages/main2.jpg" alt="">
                             </div>
                           </div>
                           <!-- // Item -->
                           <!-- Item -->
                           <div class="item">
                             <div class="img-fill">
-                                <img src="assets/images/slide-03.jpg" alt="">
+                                <img src="assets/mcimages/main3.jpg" alt="" style="width: 100%; height: 800px">
                             </div>
                           </div>
                           <!-- // Item -->
@@ -169,19 +166,21 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="left-text-content">
                         <div class="section-heading">
-                            <h6>About Us</h6>
-                            <h2>We Leave A Delicious Memory For You</h2>
+                            <h6>브랜드 소개</h6>
+                            <h2>세계 1위의 푸드서비스 기업 <br>맥도날드</h2>
                         </div>
-                        <p>Klassy Cafe is one of the best <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
+                        <p style="color: #808080; font-weight: bolder">전세계 120개국 3만 7천여 개의 매장에서 매일 6,900만명의 고객들에게 제품과 서비스를 제공하고 있는 맥도날드는 전세계인들이 사랑하는
+                            퀵 서비스 레스토랑(QSR, Quick Service Restaurant)이자 세계 1위의 푸드서비스 기업으로, 고객에게 더 나은 경험을 제공함으로써
+                            '고객이 가장 좋아하는 장소이자 음식을 즐기는 <br>최고의 방법(Our Customer’s Favorite Place and Way to Eat)'이<br> 되기 위해 노력하고 있습니다.</p>
                         <div class="row">
                             <div class="col-4">
-                                <img src="assets/images/about-thumb-01.jpg" alt="">
+                                <img src="assets/mcimages/about1.jpg" alt="">
                             </div>
                             <div class="col-4">
-                                <img src="assets/images/about-thumb-02.jpg" alt="">
+                                <img src="assets/mcimages/about2.jpg" alt="">
                             </div>
                             <div class="col-4">
-                                <img src="assets/images/about-thumb-03.jpg" alt="">
+                                <img src="assets/mcimages/about3.jpg" alt="" style="padding-top:60px">
                             </div>
                         </div>
                     </div>
@@ -189,8 +188,8 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-lg-6 col-md-6 col-xs-12">
                     <div class="right-content">
                         <div class="thumb">
-                            <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
-                            <img src="assets/images/about-video-bg.jpg" alt="">
+                            <a rel="nofollow" href="https://www.mcdonalds.co.kr"><i class="fa fa-pagelines "></i></a>
+                            <img src="assets/mcimages/brand.jpg" alt="" style="height: 400px" >
                         </div>
                     </div>
                 </div>
@@ -210,8 +209,8 @@ https://templatemo.com/tm-558-klassy-cafe
             <div class="row">
                 <div class="col-lg-4 offset-lg-4 text-center">
                     <div class="section-heading">
-                        <h6>Klassy Week</h6>
-                        <h2>This Week’s Special Meal Offers</h2>
+                        <h6>ㅡ메뉴 소개ㅡ</h6>
+                        <h2>주문 즉시 바로 조리해 더욱 맛있는, 맥도날드의 다양한 버거를 소개합니다.</h2>
                     </div>
                 </div>
             </div>
@@ -223,9 +222,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                 <div class="row">
                                     <div class="col-lg-6 offset-lg-3">
                                         <ul>
-                                          <li><a href='#tabs-1'><img src="assets/images/tab-icon-01.png" alt="">Breakfast</a></li>
-                                          <li><a href='#tabs-2'><img src="assets/images/tab-icon-02.png" alt="">Lunch</a></a></li>
-                                          <li><a href='#tabs-3'><img src="assets/images/tab-icon-03.png" alt="">Dinner</a></a></li>
+                                          <li><a href='#tabs-1'><img src="assets/images/tab-icon-01.png" alt="">맥모닝</a></li>
+                                          <li><a href='#tabs-2'><img src="assets/images/tab-icon-02.png" alt="">버거</a></a></li>
+                                          <li><a href='#tabs-3'><img src="assets/images/tab-icon-03.png" alt="">사이드 메뉴</a></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -484,15 +483,19 @@ https://templatemo.com/tm-558-klassy-cafe
                     </div>
                 </div>
                 <div class="col-lg-4">
-                    <div class="logo">
-                        <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
+                    <div class="left-content">
+                        <div class="inner-content">
+                            <h4 style="color:red;">Mcdonald</h4>
+                            <h6>THE BEST HAMBUGER</h6>
+                            
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xs-12">
                     <div class="left-text-content">
-                        <p>© Copyright Klassy Cafe Co.
-                        
-                        <br>Design: TemplateMo</p>
+                        <p>© 2019 ALL RIGHTS RESERVED BY McDonald's.
+                        <br>한국맥도날드(유)
+                        <br>대표이사: 앤토니 마티네즈</p>
                     </div>
                 </div>
             </div>

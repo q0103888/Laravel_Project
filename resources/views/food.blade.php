@@ -5,8 +5,8 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="section-heading">
-                    <h6>Our Menu</h6>
-                    <h2>Our selection of cakes with quality taste</h2>
+                    <h6>메뉴</h6>
+                    <h2>원하시는 메뉴를 골라주세요</h2>
                 </div>
             </div>
         </div>
@@ -23,7 +23,7 @@
                 <!-- 각각의 메뉴 표시 창 마다 해당하는 정보를 $data에서 가져옴 -->
                 <div class="item">
                     <div style="background-image: url('/foodimage/{{ $data->image }}');" class='card'>
-                        <div class="price"><h6>{{ $data->price }}</h6></div>
+                        <div class="price"><h6>{{ $data->price}}₩</h6></div>
                         <div class='info'>
                           <h1 class='title'>{{ $data->title }}</h1>
                           <p class='description'>{{ $data->description }}</p>
