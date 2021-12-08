@@ -239,9 +239,10 @@ https://templatemo.com/tm-558-klassy-cafe
                                                 <div class="left-list">
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-01.png" alt="">
-                                                            <h4>Fresh Chicken Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <img src="assets/mcimages/morning1.jpg" alt="" >
+                                                            <h4>에그 맥머핀</h4>
+                                                            <p>캐나디안 스타일 베이컨과 계란의 클래식한 만남,
+                                                                맥도날드의 아침을 탄생하게 한 바로 그 메뉴.</p>
                                                             <div class="price">
                                                                 <h6>$10.50</h6>
                                                             </div>
@@ -249,9 +250,9 @@ https://templatemo.com/tm-558-klassy-cafe
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-02.png" alt="">
-                                                            <h4>Orange Juice</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <img src="assets/mcimages/morning2.png" alt="">
+                                                            <h4>치킨 치즈 맥머핀</h4>
+                                                            <p>바삭한 치킨 패티와 고소한 치즈로 아침에도 든든하게!</p>
                                                             <div class="price">
                                                                 <h6>$8.50</h6>
                                                             </div>
@@ -259,9 +260,10 @@ https://templatemo.com/tm-558-klassy-cafe
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-03.png" alt="">
-                                                            <h4>Fruit Salad</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <img src="assets/mcimages/morning3.jpg" alt="">
+                                                            <h4>베이컨 에그 맥머핀</h4>
+                                                            <p>부드러운 계란, 바삭바삭한 베이컨과 고소한 치즈가<br>
+                                                                &nbsp갓 구워진 따뜻한 맥머핀</p>
                                                             <div class="price">
                                                                 <h6>$9.90</h6>
                                                             </div>
@@ -275,9 +277,10 @@ https://templatemo.com/tm-558-klassy-cafe
                                                 <div class="right-list">
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-04.png" alt="">
-                                                            <h4>Eggs Omelette</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <img src="assets/mcimages/morning4.jpg" alt="">
+                                                            <h4>소시지 에그 맥머핀</h4>
+                                                            <p>잉글리쉬 머핀 위에 먹음직스럽게 올려진 치즈와 계란,
+                                                                그리고 촉촉한 소시지 패티의 맛있는 조화!</p>
                                                             <div class="price">
                                                                 <h6>$6.50</h6>
                                                             </div>
@@ -285,9 +288,11 @@ https://templatemo.com/tm-558-klassy-cafe
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-05.png" alt="">
-                                                            <h4>Dollma Pire</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <img src="assets/mcimages/morning5.jpg" alt="">
+                                                            <h4>디럭스 브렉퍼스티</h4>
+                                                            <p>정통 아메리칸 스타일의 브렉퍼스트와 달콤한 핫케익을 함께~
+                                                                프리미엄한 주말 브런치를 매일 즐겨보세요.
+                                                                </p>
                                                             <div class="price">
                                                                 <h6>$5.00</h6>
                                                             </div>
@@ -295,9 +300,11 @@ https://templatemo.com/tm-558-klassy-cafe
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-06.png" alt="">
-                                                            <h4>Omelette & Cheese</h4>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
+                                                            <img src="assets/mcimages/morning6.png" alt="">
+                                                            <h4>상하이 치킨 스낵랩</h4>
+                                                            <p>매콤한 치킨에 달콤한 화이트 마요 소스로 매콤달콤하게!
+                                                                베이컨에 양상추, 또띠아까지 어우러져
+                                                                씹는 맛까지 즐겁다!</p>
                                                             <div class="price">
                                                                 <h6>$4.10</h6>
                                                             </div>
@@ -485,8 +492,8 @@ https://templatemo.com/tm-558-klassy-cafe
                 <div class="col-lg-4">
                     <div class="left-content">
                         <div class="inner-content">
-                            <h4 style="color:red;">Mcdonald</h4>
-                            <h6>THE BEST HAMBUGER</h6>
+                            <h4 style="color:red; font-family: 'Dancing Script', cursive; font-size: 30px">Mcdonald</h4>
+                            <h6 style="color: white">THE BEST HAMBUGER</h6>
                             
                         </div>
                     </div>

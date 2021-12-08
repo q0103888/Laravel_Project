@@ -139,33 +139,33 @@ https://templatemo.com/tm-558-klassy-cafe
     </header>
 
     <div id="top">
-    <table style="margin: 0 auto">
+        <table style="margin: 0 auto">
 
-        <tr>
-            <th style="padding: 30px">Food Name</th>
-            <th style="padding: 30px">Price</th>
-            <th style="padding: 30px">Quantity</th>
-            <th style="padding: 30px">Action</th>
-        </tr>
-
-        <form action="{{url('orderconfirm')}}" method="post">
-            @csrf
-        @foreach ($data as $data)
-        <tr align="center">
-            <td><input type="text" name="foodname[]" value="{{ $data->title }}" hidden="">{{ $data->title }}</td>
-            <td><input type="text" name="price[]" value="{{ $data->price }}" hidden="">{{ $data->price }}</td>
-            <td><input type="text" name="quantity[]" value="{{ $data->quantity }}" hidden="">{{ $data->quantity }}</td>
+            <tr>
+                <th style="padding: 30px">Food Name</th>
+                <th style="padding: 30px">Price</th>
+                <th style="padding: 30px">Quantity</th>
+                <th style="padding: 30px">Action</th>
+            </tr>
+    
+            <form action="{{url('orderconfirm')}}" method="post">
+                @csrf
+            @foreach ($data as $data)
+            <tr align="center" style="line-height:2">
+                <td><input type="text" name="foodname[]" value="{{ $data->title }}" hidden="" >{{ $data->title }}</td>
+                <td><input type="text" name="price[]" value="{{ $data->price }}" hidden="">{{ $data->price }}</td>
+                <td><input type="text" name="quantity[]" value="{{ $data->quantity }}" hidden="">{{ $data->quantity }}</td>
+                
+            </tr> 
+            @endforeach
             
-        </tr> 
-        @endforeach
-        
-        @foreach ($data2 as $data2)
-        <tr>
-        <td><a href="{{ url('/remove', $data2->id) }}" class="btn btn-warnig">Remove</a></td>
-        </tr>
-        @endforeach
-
-    </table>
+            @foreach ($data2 as $data2)
+            <tr style="position: relative; top: -140px; right: -350px;">
+            <td><a href="{{ url('/remove', $data2->id) }}" class="btn btn-warnig">Remove</a></td>
+            </tr>
+            @endforeach
+    
+        </table>
 
     <div align="center" style="padding: 10px">
         <button class="btn btn-primary" type="button" id="order">Order Now</button>
