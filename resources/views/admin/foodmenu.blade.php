@@ -20,33 +20,33 @@
             
             @csrf
             <div >
-                <label>Title</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="title" placeholder="Write a title" required>
+                <label>메뉴이름</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="title" placeholder="메뉴 이름을 적어주세요" required>
             </div>
             <div>
-                <label>Price</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="num" name="price" placeholder="price" required>
+                <label>가격</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="num" name="price" placeholder="가격을 적어주세요" required>
             </div>
             <div>
-                <label>Description</label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="description" placeholder="Description" required>
+                <label>메뉴 설명</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" name="description" placeholder="설명을 적어주세요" required>
             </div>
             <div>
                 <label>Image</label>
-                <input type="file" name="image" required>
+                <input type="file" name="image" required style="padding: 10px">
             </div>
             <div>
-                <input style="color:blue" style="color: black" type=submit value="Save">
+                <input class="btn btn-success" style="color: white; width:120px; height:40px;" type=submit value="Save">
             </div>
         </form>
 
     <div>
         <!-- 메뉴를 삭제 할 수 있는 곳 -->
-        <table bgcolor="black">
+        <table bgcolor="black"style="padding: 15px">
             <tr>
-                <th style="padding: 30px">Food Name</th>
-                <th style="padding: 30px">Price</th>
-                <th style="padding: 30px">Description</th>
+                <th style="padding: 30px">메뉴이름</th>
+                <th style="padding: 30px">가격</th>
+                <th style="padding: 30px">설명</th>
                 <th style="padding: 30px">Image</th>
                 <th style="padding: 30px">Delete</th>
                 <th style="padding: 30px">Update</th>
@@ -55,7 +55,7 @@
                 
             <tr align="center">
                 <td>{{ $data->title }}</td>
-                <td>{{ $data->price }}</td>
+                <td>{{ $data->price }}₩</td>
                 <td>{{ $data->description }}</td>
                 <td><img src="/foodimage/{{ $data->image }}" height="200px" width="200px"></td>
                 <td><a href="{{ url('/deletemenu',$data->id) }}">Delete</a></td>

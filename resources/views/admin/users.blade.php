@@ -23,20 +23,20 @@
     <!-- include는 어떠한 부분에 부분적 보기를 하기위해 사용하는 것-->
     <div style="position: relative; top: 60px; right: -150px">
         <table bgcolor="grey" border="3px">
-            <tr>
-                <th style="padding: 30px">Name</th>
-                <th style="padding: 30px">Email</th>
-                <th style="padding: 30px">Action</th>
+            <tr align="center">
+                <th style="padding: 30px 70px 30px 70px">이름</th>
+                <th style="padding: 30px 70px 30px 70px">Email</th>
+                <th style="padding: 30px 70px 30px 70px">삭제</th>
             </tr>
 
             @foreach ($data as $data)
             <!-- adminController에서 만든 $data를 가져온후 루프 돌려서 각 해당 사항마다 출력 -->
             <tr align="center">
-                <td>{{ $data->name }}</td>
-                <td>{{ $data->email }}</td>
+                <td style="padding: 10px 70px 10px 70px">{{ $data->name }}</td>
+                <td style="padding: 10px 70px 10px 70px">{{ $data->email }}</td>
 
                 @if($data->usertype=="0")
-                <td><a href="{{ url('/deleteuser',$data->id)}}">Delete</a></td>
+                <td style="padding: 10px 70px 10px 70px"><a href="{{ url('/deleteuser',$data->id)}}">Delete</a></td>
                 @else
                 <td><a>Not Allowed</a></td>
                 @endif

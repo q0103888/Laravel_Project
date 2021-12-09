@@ -11,13 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>Klassy Cafe - Restaurant HTML Template</title>
+    <title>Mcdonald</title>
 <!--
-    
-TemplateMo 558 Klassy Cafe
-
-https://templatemo.com/tm-558-klassy-cafe
-
 -->
     <!-- Additional CSS Files -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
@@ -62,7 +57,7 @@ https://templatemo.com/tm-558-klassy-cafe
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="{{ url('/') }}" class="logo">
-                            <img src="assets/mcimages/mcdonalds.png" align="klassy cafe html template">
+                            <img src="assets/mcimages/mcdonalds.png" style="padding-left:70px; padding-top: 15px ">
                             <a class="menu-trigger">
                                 <span>Menu</span>
                             </a>
@@ -75,16 +70,6 @@ https://templatemo.com/tm-558-klassy-cafe
                             <li class="scroll-to-section"><a href="#menu">Menu</a></li>
                             <li class="scroll-to-section">
                            	
-                        <!-- 
-                            <li class="submenu">
-                                <a href="javascript:;">Drop Down</a>
-                                <ul>
-                                    <li><a href="#">Drop Down Page 1</a></li>
-                                    <li><a href="#">Drop Down Page 2</a></li>
-                                    <li><a href="#">Drop Down Page 3</a></li>
-                                </ul>
-                            </li>
-                        -->
 
                             <li class="scroll-to-section">
                             @auth
@@ -127,11 +112,6 @@ https://templatemo.com/tm-558-klassy-cafe
                             </li>   
 
                         </ul>        
-                        {{-- 이거 뭔지 모르겠음 --}}
-                        {{-- <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a> --}}
-                        <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
             </div>
@@ -142,10 +122,10 @@ https://templatemo.com/tm-558-klassy-cafe
         <table style="margin: 0 auto">
 
             <tr>
-                <th style="padding: 30px">Food Name</th>
-                <th style="padding: 30px">Price</th>
-                <th style="padding: 30px">Quantity</th>
-                <th style="padding: 30px">Action</th>
+                <th style="padding: 30px">메뉴</th>
+                <th style="padding: 30px">가격</th>
+                <th style="padding: 30px">수량</th>
+                <th style="padding: 30px">취소</th>
             </tr>
     
             <form action="{{url('orderconfirm')}}" method="post">
@@ -153,15 +133,15 @@ https://templatemo.com/tm-558-klassy-cafe
             @foreach ($data as $data)
             <tr align="center" style="line-height:2">
                 <td><input type="text" name="foodname[]" value="{{ $data->title }}" hidden="" >{{ $data->title }}</td>
-                <td><input type="text" name="price[]" value="{{ $data->price }}" hidden="">{{ $data->price }}</td>
+                <td><input type="text" name="price[]" value="{{ $data->price }}" hidden="">{{ $data->price }}₩</td>
                 <td><input type="text" name="quantity[]" value="{{ $data->quantity }}" hidden="">{{ $data->quantity }}</td>
                 
             </tr> 
             @endforeach
             
             @foreach ($data2 as $data2)
-            <tr style="position: relative; top: -140px; right: -350px;">
-            <td><a href="{{ url('/remove', $data2->id) }}" class="btn btn-warnig">Remove</a></td>
+            <tr >
+            <td style="position: relative; top: -80px; right: -330px;"><a href="{{ url('/remove', $data2->id) }}" class="btn btn-warnig">Remove</a></td>
             </tr>
             @endforeach
     
@@ -174,29 +154,61 @@ https://templatemo.com/tm-558-klassy-cafe
 
     <div id="appear" align="center" style="padding: 10px; display: none">
         <div style="padding: 10px">
-            <label>Name</label>
-            <input type="text" name="name" placeholder="Name">
+            <label>이름</label>
+            <input type="text" name="name" placeholder="이름">
         </div>
 
         <div style="padding: 10px">
-            <label>Phone</label>
-            <input type="number" name="phone" placeholder="Phone number">
+            <label>전화번호</label>
+            <input type="number" name="phone" placeholder="전화번호">
         </div>
 
         <div style="padding: 10px">
-            <label>Address</label>
-            <input type="text" name="address" placeholder="Address">
+            <label>요구사항</label>
+            <input type="text" name="address" placeholder="요구사항">
         </div>
 
         <div style="padding: 10px">
-            <input class="btn btn-success" type="submit" value="Order Confirm">
+            <input class="btn btn-success" type="submit" value="주문하기">
 
-            <button id="close" type="button" class="btn btn-danger">Close</button>
+            <button id="close" type="button" class="btn btn-danger">취소</button>
         </div>
     </div>
 </form>
 
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-xs-12">
+                    <div class="right-text-content">
+                            <ul class="social-icons">
+                                <li><a href="https://www.facebook.com/McDonaldsKorea"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.youtube.com/user/McDonaldsKor"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.instagram.com/mcdonalds_kr/"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="left-content">
+                        <div class="inner-content">
+                            <h4 style="color:red; font-family: 'Dancing Script', cursive; font-size: 30px">Mcdonald</h4>
+                            <h6 style="color: white">THE BEST HAMBUGER</h6>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                    <div class="left-text-content">
+                        <p>© 2019 ALL RIGHTS RESERVED BY McDonald's.
+                        <br>한국맥도날드(유)
+                        <br>대표이사: 앤토니 마티네즈</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
         <script type="text/javascript">
             $("#order").click(
