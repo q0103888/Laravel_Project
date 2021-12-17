@@ -141,7 +141,7 @@
             
             @foreach ($data2 as $data2)
             <tr >
-            <td style="position: relative; top: -80px; right: -330px;"><a href="{{ url('/remove', $data2->id) }}" class="btn btn-warnig">Remove</a></td>
+            <td style="position: relative; top: -40px; right: -270px;"><a href="{{ url('/remove', $data2->id) }}" class="btn btn-warnig">Remove</a></td>
             </tr>
             @endforeach
     

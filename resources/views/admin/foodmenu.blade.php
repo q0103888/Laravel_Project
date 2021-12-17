@@ -14,7 +14,7 @@
     @include("admin.navbar");
     <!-- include는 어떠한 부분에 부분적 보기를 하기위해 사용하는 것-->
     
-    <div style="position: relative; top: 60px; right:-150px">
+    <div style="position: relative; top: 60px; right:-70px">
     <!-- 여기서 메뉴를 등록-->
         <form action="{{ url('/uploadfood') }}" method="post" enctype="multipart/form-data">
             
@@ -43,13 +43,13 @@
     <div>
         <!-- 메뉴를 삭제 할 수 있는 곳 -->
         <table bgcolor="black"style="padding: 15px">
-            <tr>
-                <th style="padding: 30px">메뉴이름</th>
-                <th style="padding: 30px">가격</th>
-                <th style="padding: 30px">설명</th>
-                <th style="padding: 30px">Image</th>
-                <th style="padding: 30px">Delete</th>
-                <th style="padding: 30px">Update</th>
+            <tr align="center">
+                <th style="padding: 20px">메뉴이름</th>
+                <th style="padding: 20px">가격</th>
+                <th style="padding: 20px; width:400px">설명</th>
+                <th style="padding: 20px">Image</th>
+                <th style="padding: 20px">Delete</th>
+                <th style="padding: 20px">Update</th>
             </tr>
             @foreach ($data as $data)
                 

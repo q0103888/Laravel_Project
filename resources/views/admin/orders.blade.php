@@ -24,7 +24,7 @@
         <form action="{{ url('/search') }}" method="get">
           @csrf
 
-          <input type="text" name="search" style="width: 300px" placeholder="주문자or메뉴를 입력하세요" >
+          <input type="text" name="search" style="width: 300px; color:black;" placeholder="주문자or메뉴를 입력하세요" >
 
           <input type="submit" value="search" class="btn btn-success">
 
@@ -43,14 +43,14 @@
             </tr>
 
             @foreach($data as $data)
-            <tr align="center" style="background-color:black">
-                <td>{{ $data->name }}</td>
-                <td>{{ $data->phone }}</td>
-                <td>{{ $data->address }}</td>
-                <td>{{ $data->foodname }}</td>
-                <td>{{ $data->price }}₩</td>
-                <td>{{ $data->quantity }}</td>
-                <td>{{ $data->price * $data->quantity}}₩</td>
+            <tr align="center" style="background-color:black; padding-top: 20px">
+                <td style="padding-top: 20px">{{ $data->name }}</td>
+                <td style="padding-top: 20px">{{ $data->phone }}</td>
+                <td style="padding-top: 20px">{{ $data->address }}</td>
+                <td style="padding-top: 20px">{{ $data->foodname }}</td>
+                <td style="padding-top: 20px">{{ $data->price }}₩</td>
+                <td style="padding-top: 20px">{{ $data->quantity }}</td>
+                <td style="padding-top: 20px">{{ $data->price * $data->quantity}}₩</td>
             </tr>
             @endforeach
         </table>

@@ -38,6 +38,8 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    
+
     public function upload(Request $request) {
         //메뉴 정보 등록 및 업데이트
         $data = new Food();
@@ -84,6 +86,12 @@ class AdminController extends Controller
 
         return view('admin.orders', compact('data'));
         // user가 주문한 정보를 admin이 확인하는 곳으로 이동하는 것
+    }
+
+    public function deleteorders($id) {
+        $data=order::find($id);
+        $data->delete();
+        return redirect()->back();
     }
 
     public function search(Request $request) {
